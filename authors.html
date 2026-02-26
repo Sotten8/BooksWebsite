@@ -5,68 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Stanislav Oleksiichuk">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    a {
+      color: #5f00e0;
+      text-decoration: none;
+    }
+  </style>
   <title>Famous Authors</title>
 </head>
 
-<body style="background-image: url(assets/background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" link="#001f67" vlink="#5f00e0" alink="#8e00e0">
+<body>
 
-  <header style="display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url(assets/header.jpg);
-      padding: 20px 0px 20px 0px">
+  <header>
     <h1>Books Rule The World</h1>
   </header>
 
-  <main style="margin: 20px; font-size: 20px; line-height: 1.5;">
-    <em><a href="index.html" style="font-style: italic; font-weight: bold;text-decoration: none;">&#8592; Return to
-        Home</a></em>
+  <main>
+    <a href="index.html" class="back-button">&#8592; Return to
+      Home</a>
 
-    <h2 align="center">The Authors Among Us</h2>
-    <hr color="#000">
+    <h2>The Authors Among Us</h2>
+    <hr>
 
     <div>
-      <p align="justify">Behind every great book is a mind that dared to dream and a hand that dared to write. Our
+      <p>Behind every great book is a mind that dared to dream and a hand that dared to write. Our
         authors are more than just storytellers; they are researchers, observers, and creators who transform ideas into
-        lasting words. On this page, you can meet the people whose passion and dedication bring our library to life</p>
+        lasting words. On this page, you can meet the people whose passion and dedication bring our library to life.</p>
     </div>
 
-    <hr color="#000">
+    <hr>
 
     <div>
       <h3>Writers, artists, creators!</h3>
       <p>These are one of the most famous authors you've ever heard:</p>
 
-      <table align="center" valign="center" border="6" bordercolor="#bfaa1b" width="100%">
-        <caption><strong style="font-size: 24px;">Authors</strong></caption>
-        <tr align="center" bgcolor="#000">
-          <td><img src="assets/authors/shakespeare.jpg" alt="Shakespeare" height="400px" /></td>
-          <td><img src="assets/authors/christie.jpg" alt="Christie" height="400px" /></td>
-          <td><img src="assets/authors/hemingway.jpg" alt="Hemingway" height="400px" /></td>
-          <td><img src="assets/authors/rowling.jpg" alt="Rowling" height="400px" /></td>
+      <table id="authors-table">
+        <caption>Authors</caption>
+        <tr id="author-photo">
+          <td><img src="assets/authors/shakespeare.jpg" alt="Shakespeare" /></td>
+          <td><img src="assets/authors/christie.jpg" alt="Christie" /></td>
+          <td><img src="assets/authors/hemingway.jpg" alt="Hemingway" /></td>
+          <td><img src="assets/authors/rowling.jpg" alt="Rowling" /></td>
         </tr>
 
-        <tr align="center" bgcolor="#ccc">
-          <th><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank"
-              style="text-decoration: none;">William
+        <tr>
+          <th><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William
               Shakespeare</a></th>
-          <th><a href="https://en.wikipedia.org/wiki/Agatha_Christie" target="_blank" style="text-decoration: none;"
-              name="christie">Agatha Christie</a>
+          <th><a href="https://en.wikipedia.org/wiki/Agatha_Christie" target="_blank" name="christie">Agatha
+              Christie</a>
           </th>
-          <th><a href="https://en.wikipedia.org/wiki/Ernest_Hemingway" target="_blank" style="text-decoration: none;"
-              name="hemingway">Ernest
+          <th><a href="https://en.wikipedia.org/wiki/Ernest_Hemingway" target="_blank" name="hemingway">Ernest
               Hemingway</a></th>
-          <th><a href="https://en.wikipedia.org/wiki/J._K._Rowling" target="_blank" style="text-decoration: none;"
-              name="rowling">J.K.
+          <th><a href="https://en.wikipedia.org/wiki/J._K._Rowling" target="_blank" name="rowling">J.K.
               Rowling</a></th>
         </tr>
 
-        <tr align="center" bgcolor="#cccaaa">
+        <tr class="info-cell">
           <td>William Shakespeare was a master of
             capturing the human soul. Writing during the Renaissance, he crafted timeless tragedies and comedies that
             explored themes of power, love, and betrayal. His influence is so vast that he credited with inventing over
@@ -89,22 +84,18 @@
       <br>
     </div>
 
-    <hr color="#000">
+    <hr>
 
     <div>
-      <p align="justify">These writers prove that words are more powerful than time. Though they lived in different eras
+      <p>These writers prove that words are more powerful than time. Though they lived in different eras
         and wrote in different genres, they all shared a common goal: to capture the essence of the human experience.
         Their stories act as a bridge between the past and the future, reminding us that while technology and societies
         change, the core of human emotion remains the same.</p>
     </div>
   </main>
 
-  <footer style="
-      background-color: #000; 
-      display: flex; 
-      padding: 20px; 
-      justify-content: center;">
-    <p style="color: #ffffff">&#169; 2026 Stanislav Oleksiichuk</p>
+  <footer>
+    <p class="copyright">&#169; 2026 Stanislav Oleksiichuk</p>
   </footer>
 </body>
 
