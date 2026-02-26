@@ -29,6 +29,10 @@ footer {
   justify-content: center;
 }
 
+footer > p {
+  color: #ffffff;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -76,6 +80,20 @@ ol {
   text-align: justify;
 }
 
+li > b,
+p > b {
+  color: #900000;
+}
+
+b + i {
+  font-weight: 600;
+  color: #003e80;
+}
+
+h3 + p {
+  margin-top: 15px;
+}
+
 dt {
   text-align: justify;
   font-weight: bold;
@@ -110,7 +128,7 @@ caption {
   font-weight: bold;
 }
 
-#authors-table #author-photo {
+#author-photo {
   background-color: #000;
 }
 
@@ -165,7 +183,7 @@ caption {
   background-color: #fea2bb;
 }
 
-#books-table #info-cols {
+#info-cols {
   background-color: #fafafa;
 }
 
@@ -218,6 +236,10 @@ dd img {
   width: 13em;
 }
 
-.copyright {
-  color: #ffffff;
+.underlined {
+  text-decoration: underline;
+}
+
+td > .underlined {
+  font-weight: 500;
 }
