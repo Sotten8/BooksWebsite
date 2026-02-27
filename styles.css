@@ -261,6 +261,22 @@ td {
 .back-button {
   font-style: italic;
   font-weight: bold;
+  text-decoration: underline;
+}
+
+.back-button:link,
+.back-button:visited {
+  color: #5a5a5a;
+}
+
+.back-button:hover {
+  color: #b49d52;
+  -webkit-text-stroke: 0.5px #000;
+}
+
+.back-button:active {
+  transform: scale(0.95);
+  color: #7f0096;
 }
 
 .num-list {
