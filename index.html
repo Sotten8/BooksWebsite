@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Stanislav Oleksiichuk">
+  <meta name="author" content="Stanislav Oleksiichuk" id="author">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Books Information</title>
 </head>
@@ -16,7 +16,8 @@
   </header>
 
   <main>
-    <h2 class="subtitle">Start Ruling Your Life With Them</h2>
+    <h2 class="subtitle">
+      Start Ruling Your Life With Them</h2>
     <div>
       <p>What did you
         know about books? Is it just an empty, paper made thing
@@ -28,14 +29,14 @@
         you about the most beautiful things, that has happened in this world &ndash; <span>BOOKS!</span></p>
     </div>
 
-    <hr>
+    <hr />
 
     <div>
       <h3>Let's Get Started!</h3>
       <p>You can visit other pages of this website for better information:</p>
 
       <nav>
-        <ul>
+        <ul id="navigation">
           <li>
             <a href="authors.html">The most famous authors of our generation &#8594;</a>
           </li>
@@ -59,16 +60,16 @@
         <li>
           <h4>Ancient Beginnings</h4>
           <div class="inserted-img">
-            <p>Long before paper existed, people wanted to share their stories. The first "books"
+            <p id="ancient-beginnings">Long before paper existed, people wanted to share their stories. The first
+              "books"
               weren't made of paper
               at all. In <span>Ancient Mesopotamia</span>, people used clay tablets. They would scratch marks into wet
               clay
               and let it dry in the sun. Later, in <span>Ancient Egypt</span>, they discovered papyrus — a material made
-              from
-              a plant that grew along the Nile River. They rolled it into long scrolls, some of which were over 30
+              from a plant that grew along the Nile River. They rolled it into long scrolls, some of which were over 30
               meters long!</p>
-            <a href="assets/home/ancient.jpg" class="img-hyperlink"><img src="assets/home/ancient.jpg" alt="Ancient" />
-            </a>
+            <a href="assets/home/ancient.jpg" class="img-hyperlink"><img src="assets/home/ancient.jpg"
+                alt="Ancient" /></a>
           </div>
         </li>
 
@@ -83,8 +84,7 @@
               spent years hand-copying books, decorating them with beautiful gold and colors. These were called
               <span>illuminated manuscripts</span>.
             </p>
-            <a href="assets/home/middle-ages.jpg"><img src="assets/home/middle-ages.jpg" alt="Middle-Ages" />
-            </a>
+            <a href="assets/home/middle-ages.jpg"><img src="assets/home/middle-ages.jpg" alt="Middle-Ages" /></a>
           </div>
         </li>
 
@@ -97,8 +97,7 @@
               Germany. Suddenly, a book that took a year to copy by hand could be printed in a day. Knowledge was no
               longer just for the rich; it became available to everyone. This led to the <span>"Golden Age"</span> of
               literature, where famous writers like Shakespeare and Dickens could reach thousands of readers.</p>
-            <a href="assets/home/golden-age.jpg"><img src="assets/home/golden-age.jpg" alt="Golden-Age" />
-            </a>
+            <a href="assets/home/golden-age.jpg"><img src="assets/home/golden-age.jpg" alt="Golden-Age" /></a>
           </div>
         </li>
 
@@ -112,14 +111,15 @@
               in
               our pockets. However, the goal remains the same: to tell a story, share an idea, and connect one mind to
               another.</p>
-            <a href="assets/home/digital-era.jpg"><img src="assets/home/digital-era.jpg" alt="Digital-Era" />
-            </a>
+            <a href="assets/home/digital-era.jpg"><img src="assets/home/digital-era.jpg" alt="Digital-Era" /></a>
           </div>
         </li>
       </ol>
     </div>
 
-    <hr>
+    <script>
+      document.write('<hr/ >')
+    </script>
 
     <div>
       <h3>The Conclusion</h3>
@@ -133,6 +133,20 @@
   <footer>
     <p>&#169; 2026 Stanislav Oleksiichuk</p>
   </footer>
+
+  <script>
+    alert("Welcome to the Book Website. Here you will find out the best information about books that you are looking for!");
+    let nickname, result;
+    while (!result) {
+      nickname = prompt("Write down your nickname:", "user123");
+      if (!nickname) {
+        alert("So, you are nobody...");
+        continue;
+      }
+      result = confirm(`Is "${nickname}" correct?`);
+    }
+  </script>
+  <script src="index.js"></script>
 </body>
 
 </html>
