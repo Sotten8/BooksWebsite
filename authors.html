@@ -34,12 +34,12 @@
       <p>These are one of the most famous authors you've ever heard:</p>
 
       <table id="authors-table">
-        <caption>Authors</caption>
+        <caption id="caption">Authors</caption>
         <tr id="author-photo">
-          <td><img src="assets/authors/shakespeare.jpg" alt="Shakespeare" /></td>
-          <td><img src="assets/authors/christie.jpg" alt="Christie" /></td>
-          <td><img src="assets/authors/hemingway.jpg" alt="Hemingway" /></td>
-          <td><img src="assets/authors/rowling.jpg" alt="Rowling" /></td>
+          <td><img src="assets/authors/shakespeare.jpg" alt="Shakespeare" onclick="alertQuote(this)" /></td>
+          <td><img src="assets/authors/christie.jpg" alt="Christie" onclick="alertQuote(this)" /></td>
+          <td><img src="assets/authors/hemingway.jpg" alt="Hemingway" onclick="alertQuote(this)" /></td>
+          <td><img src="assets/authors/rowling.jpg" id="name-rowling" alt="Rowling" /></td>
         </tr>
 
         <tr>
@@ -88,8 +88,9 @@
   </main>
 
   <footer>
-    <p>&#169; 2026 Stanislav Oleksiichuk</p>
+    <p id="footer-authors">&#169; 2026 Stanislav Oleksiichuk</p>
   </footer>
+  <script src="authors.js"></script>
 </body>
 
 </html>

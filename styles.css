@@ -329,3 +329,36 @@ dd img {
   text-decoration: underline;
   font-weight: 500;
 }
+
+.books-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.books-button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background-color: #00c389;
+  font-weight: bold;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+}
+
+.books-button:hover {
+  background-color: #b49d52;
+}
+
+.books-button:active {
+  transform: scale(0.95);
+  color: #ffd500;
+}
+
+.interesting-fact {
+  width: 80%;
+  position: relative;
+  justify-self: center;
+}
