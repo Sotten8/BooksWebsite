@@ -92,22 +92,27 @@ function subtitleMouseDragstart() {
 }
 
 function subtitleMouseDown(event) {
-  const subtitle = event.target.closest('#books-subtitle');
-  subtitle.style.position = 'absolute';
-  subtitle.style.zIndex = 1000;
-  document.body.append(subtitle);
+  booksSubtitle.style.position = 'absolute';
+  booksSubtitle.style.zIndex = 1000;
 
-  function subtitleMouseMove(event) {
-    subtitle.style.left = `${event.pageX - subtitle.offsetWidth / 2}px`;
-    subtitle.style.top = `${event.pageY - subtitle.offsetHeight / 2}px`;
+  function moveCoords(coordX, coordY) {
+    booksSubtitle.style.left = `${coordX - booksSubtitle.offsetWidth / 2}px`;
+    booksSubtitle.style.top = `${coordY - booksSubtitle.offsetHeight / 2}px`;
   }
 
-  document.addEventListener('mousemove', subtitleMouseMove);
+  function subtitleMouseMove(event) {
+    moveCoords(event.pageX, event.pageY);
+  }
 
   function subtitleMouseUp() {
     document.removeEventListener('mousemove', subtitleMouseMove);
     document.removeEventListener('mouseup', subtitleMouseUp);
   }
+
+  moveCoords(event.pageX, event.pageY);
+  document.body.append(booksSubtitle);
+
+  document.addEventListener('mousemove', subtitleMouseMove);
 
   document.addEventListener('mouseup', subtitleMouseUp);
 }
