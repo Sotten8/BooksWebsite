@@ -1,5 +1,44 @@
 const menu = document.querySelector('.books-menu');
 
+function styleAddingOver(event) {
+  const button = event.target.closest('button');
+  if (!button) return;
+  if (button.contains(event.relatedTarget)) return;
+  button.style.backgroundColor = '#b49d52';
+  button.style.border = '2px solid #aa00ff';
+}
+
+function styleTakingOut(event) {
+  const button = event.target.closest('button');
+  if (!button) return;
+
+  if (!button.contains(event.relatedTarget)) {
+    button.style.backgroundColor = '#00c389';
+    button.style.transform = 'scale(1)';
+    button.style.color = '#000';
+    button.style.border = '2px solid #f6ff00';
+
+    clearTimeout(button.timer);
+    button.timer = setTimeout(() => {
+      button.style.border = 'none';
+    }, 1500);
+  }
+}
+
+function styleAddingDown(event) {
+  const button = event.target.closest('button');
+  if (!button) return;
+  button.style.transform = 'scale(0.95)';
+  button.style.color = '#ffd500';
+}
+
+function styleTakingUp(event) {
+  const button = event.target.closest('button');
+  if (!button) return;
+  button.style.transform = 'scale(1)';
+  button.style.color = '#000';
+}
+
 function buttonSwitcher(event) {
   const button = event.target;
   const reason = button.dataset.reason;
@@ -37,4 +76,38 @@ function buttonSwitcher(event) {
   }
 }
 
+menu.addEventListener('mouseover', styleAddingOver);
+menu.addEventListener('mouseout', styleTakingOut);
+menu.addEventListener('mousedown', styleAddingDown);
+menu.addEventListener('mouseup', styleTakingUp);
 menu.addEventListener('click', buttonSwitcher);
+
+const booksSubtitle = document.getElementById('books-subtitle');
+
+function subtitleMouseDragstart() {
+  return false;
+}
+
+function subtitleMouseDown(event) {
+  const subtitle = event.target.closest('#books-subtitle');
+  subtitle.style.position = 'absolute';
+  subtitle.style.zIndex = 1000;
+  document.body.append(subtitle);
+
+  function subtitleMouseMove(event) {
+    subtitle.style.left = `${event.pageX - subtitle.offsetWidth / 2}px`;
+    subtitle.style.top = `${event.pageY - subtitle.offsetHeight / 2}px`;
+  }
+
+  document.addEventListener('mousemove', subtitleMouseMove);
+
+  function subtitleMouseUp() {
+    document.removeEventListener('mousemove', subtitleMouseMove);
+    document.removeEventListener('mouseup', subtitleMouseUp);
+  }
+
+  document.addEventListener('mouseup', subtitleMouseUp);
+}
+
+booksSubtitle.addEventListener('dragstart', subtitleMouseDragstart);
+booksSubtitle.addEventListener('mousedown', subtitleMouseDown);

@@ -348,17 +348,13 @@ dd img {
   cursor: pointer;
 }
 
-.books-button:hover {
-  background-color: #b49d52;
-}
-
-.books-button:active {
-  transform: scale(0.95);
-  color: #ffd500;
-}
-
 .interesting-fact {
   width: 80%;
   position: relative;
   justify-self: center;
+}
+
+#books-subtitle {
+  cursor: pointer;
+  font-size: 23.4px;
 }
