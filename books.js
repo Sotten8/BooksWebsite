@@ -4,6 +4,9 @@ function styleAddingOver(event) {
   const button = event.target.closest('button');
   if (!button) return;
   if (button.contains(event.relatedTarget)) return;
+
+  clearTimeout(button.timer);
+
   button.style.backgroundColor = '#b49d52';
   button.style.border = '2px solid #aa00ff';
 }
