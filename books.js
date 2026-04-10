@@ -92,6 +92,7 @@ function subtitleMouseDragstart() {
 }
 
 function subtitleMouseDown(event) {
+  event.preventDefault();
   booksSubtitle.style.position = 'absolute';
   booksSubtitle.style.zIndex = 1000;
 
